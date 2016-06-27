@@ -298,6 +298,7 @@
 				E4725ABA1D20FCBB00D59FF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
