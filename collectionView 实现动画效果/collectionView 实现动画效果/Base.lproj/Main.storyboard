@@ -44,17 +44,24 @@
                                     <action selector="click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cov-fb-fc8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aa7-50-taC">
+                                <rect key="frame" x="235" y="214" width="164" height="79"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="QIy-ge-foR" id="PH1-Db-t96"/>
+                        <outlet property="label" destination="Aa7-50-taC" id="NwR-Y3-8hv"/>
                         <outlet property="layout" destination="dLz-W0-4Oz" id="qXe-cd-D2x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="340" y="429"/>
+            <point key="canvasLocation" x="229" y="426"/>
         </scene>
     </scenes>
 </document>

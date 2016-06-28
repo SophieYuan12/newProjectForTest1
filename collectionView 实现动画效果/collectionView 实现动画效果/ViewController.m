@@ -10,6 +10,7 @@
 #import "cell.h"
 @interface ViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UILabel *label;
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *layout;
 @property(nonatomic,strong)NSMutableArray *array;
 
@@ -17,7 +18,9 @@
 
 @implementation ViewController
 - (IBAction)click:(id)sender {
-    [self scroll];
+//    [self scroll];
+    [self labelContentChanged];
+    
 }
 
 - (void)viewDidLoad {
@@ -26,10 +29,38 @@
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     self.collectionView.bounces = NO;
-    
+//    self.label.backgroundColor = [UIColor grayColor];
+    self.label.text = self.array[0];
+    [self.label sizeToFit];
     [self setupLayout];
     
 }
+-(void)setupLabelAnim
+{
+    CATransition *anim = [CATransition animation];
+//    anim.type = @"pageCurl";
+//    anim.subtype = kCATransitionFromBottom;
+    anim.duration = 1.0f;
+//    //display mode, slow at beginning and end
+//    anim.timingFunction = UIViewAnimationCurveEaseInOut;
+    //在动画执行完时是否被移除
+//    anim.type = @"oglFlip";
+   anim.type = @"cube";
+//    anim.type = @"pageCurl";
+//   anim.type =  @"cameraIrisHollowOpen";
+    // 设置动画子类型：过度方向
+    anim.subtype = kCATransitionFromTop;
+    [self.label.layer addAnimation:anim forKey:nil ];
+}
+
+-(void)labelContentChanged
+
+{
+    [self setupLabelAnim];
+    
+    self.label.text = self.array[1];
+}
+
 -(void)setupLayout
 {
     self.layout.minimumInteritemSpacing = 0;
