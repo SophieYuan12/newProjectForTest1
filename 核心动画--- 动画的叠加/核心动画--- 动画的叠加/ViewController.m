@@ -20,6 +20,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // 这是一个新的分支
+    
+    NSLog(@"%@", @"nihao nihao .....");
+
     
     // 1. 新建图层
     CALayer *layer = [CALayer layer];
